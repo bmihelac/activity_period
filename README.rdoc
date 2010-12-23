@@ -1,0 +1,20 @@
+= ActivityPeriod
+
+ActiveRecord extension that adds checking if resource is active on given date
+based on +active_from+ and +active_to+ attributes.
+
+== Usage
+
+    class Article < ActiveRecord::Base
+      has_active_period
+    end
+
+    article = Article.create(:name => "article 1", 
+                             :active_from => Date.new(2010,6,15),
+                             :active_to => Date.new(2010,6,20))
+
+    Article.active(Date.new(2010, 06, 17))[0] == article # => true
+    article.is_active?(Date.new(2010, 6, 30)) # => false
+    article.is_active? # => false for today
+
+Copyright (c) 2010 Bojan Mihelac, released under the MIT license

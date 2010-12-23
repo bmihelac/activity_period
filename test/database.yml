@@ -1,0 +1,7 @@
+mysql:
+  adapter: mysql
+  host: localhost
+  username: root
+  password:
+  database: activity_period_plugin_test
+
