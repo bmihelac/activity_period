@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "activity_period.gemspec",
     "init.rb",
     "install.rb",
     "lib/activity_period.rb",
